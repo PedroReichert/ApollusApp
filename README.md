@@ -4,9 +4,6 @@ Projeto de cadastro de catálogos usando Angular Material.
 ## Requisitos
 -->Instale npm: https://www.npmjs.com/get-npm
 
--->Pelo terminal execute: `npm install -g @angular/cli`
-
-
 ## Instruções
 1. Baixei ou clone o repositório num diretório de preferência.
 2. Por um terminal, navegue até o diretório dos arquivos e execute o comando `npm install`.
