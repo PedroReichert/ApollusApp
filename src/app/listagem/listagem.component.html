@@ -1,0 +1,61 @@
+<div class="container-fluid">
+  <div class="row" style="margin-top:15px">
+    <div class="row col-md-12">
+      <div class="table-container">
+        <mat-form-field>
+          <input class='input-field' matInput (keyup)="applyFilter($event.target.value)" placeholder="Filtro">
+        </mat-form-field>
+
+        <div class="mat-elevation-z8">
+          <table mat-table [dataSource]="dataSource" matSort style="width: 100%;">
+            <!-- Select -->
+            <ng-container matColumnDef="select">
+              <th mat-header-cell *matHeaderCellDef>
+                
+              </th>
+              <td mat-cell *matCellDef="let row">
+                <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selecionar(row) : null"
+                  [checked]="selection.isSelected(row)">
+                </mat-checkbox>
+              </td>
+            </ng-container>
+            <!-- Status -->
+            <ng-container matColumnDef="status">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+              <td mat-cell *matCellDef="let row"> <i class="glyphicon glyphicon-one-fine-dot" [style.color]="row.status==1 ? 'green' : 'red'"></i>
+              </td>
+            </ng-container>
+
+            <!-- Código -->
+            <ng-container matColumnDef="codigo">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Código </th>
+              <td mat-cell *matCellDef="let row"> {{row.codigo}} </td>
+            </ng-container>
+
+            <!-- Descrição -->
+            <ng-container matColumnDef="descricao">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Descrição </th>
+              <td mat-cell *matCellDef="let row"> {{row.descricao}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+            </tr>
+          </table>
+
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+        </div>
+        <!--FOOTER BUTTONS-->
+        <div class="row col-md-12" style="margin-top:15px; width:100%;">
+            <div class="filler"></div>          
+            <button mat-raised-button color="warn" (click)="excluirSelecionados()">Excluir</button>
+            <button mat-raised-button color="primary" style="margin-left:10px;" (click)="visualizar()">Visualizar</button>
+            <button mat-raised-button color="accent" style="margin-left:10px;" routerLink="/cadastro">Adicionar</button>
+  
+        </div>
+        <!--end-->
+      </div>
+    </div>
+  </div>
+
+</div>

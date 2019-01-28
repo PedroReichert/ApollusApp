@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+
+.input-field {
+    padding: 0 5px 0 5px;
+}
+
+.fields-container{
+   margin-left: 10%;
+   margin-right: 10%;
+}
+
+.table-container{
+    padding: 0 5px 0 5px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+  }
+  
+
+  
+  td, th {
+    width: 25%;
+  }
+
+.glyphicon.glyphicon-one-fine-dot:before {
+    content: "\25cf";
+    font-size: 1.5em;
+    
+}
+
+.filler{
+    flex: 1 1 auto;
+}
+  
