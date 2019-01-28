@@ -8,7 +8,7 @@ Projeto de cadastro de catálogos usando Angular Material.
 
 
 ## Instruções
-1. Baixei ou clone o repositório num diretório de preferencia.
-2. Por um terminal, navegue ate o diretório dos aruqivos e rode o comando `npm install`
-3. Rode o comando `ng serve -o` para abrir o projeto automaticamente no seu navegador padrão
+1. Baixei ou clone o repositório num diretório de preferência.
+2. Por um terminal, navegue até o diretório dos arquivos e execute o comando `npm install`.
+3. Ainda no terminal, execute o comando `ng serve -o` para abrir o projeto automaticamente no seu navegador padrão.
 4. Fim :)
